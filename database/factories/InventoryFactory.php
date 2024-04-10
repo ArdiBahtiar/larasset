@@ -19,7 +19,7 @@ class InventoryFactory extends Factory
         return [
             'Name' => fake()->name(),
             'Serial_Number' => fake()->randomDigit(),
-            // 'Status' => ,
+            'Status' => fake()->randomElement(['Ready', 'Deployed', 'Pending']),
             'Checked_Out_to' => fake()->name(),
         ];
     }
