@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Inventory extends Model
+class Asset extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $table = 'assets';
+    public $fillable = [
         'Name',
         'Serial_Number',
         'Status',
