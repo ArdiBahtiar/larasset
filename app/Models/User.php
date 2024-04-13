@@ -23,7 +23,7 @@ class User extends Authenticatable
         'email',
         'phone',
         'department',
-        'inventory',
+        'assets',
         'components',
         'password',
     ];

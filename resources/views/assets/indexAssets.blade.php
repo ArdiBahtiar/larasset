@@ -16,14 +16,15 @@
                                 <th>Serial Number</th>
                                 <th>Status</th>
                                 <th>Pengguna</th>
-                            </th>
+                            </tr>
 
                                 @if(! count($assets))
                                 <tr>
                                     <td colspan="3">Belum ada Asset</td>
                                 </tr>
                                 @endif
-                                @foreach($assets as $asset)
+
+                            @foreach($assets as $asset)
                                 <tr>
                                     <td>{{ $asset->id }}</td>
                                     <td>{{ $asset->Name }}</td>
@@ -31,7 +32,6 @@
                                     <td>{{ $asset->Status }}</td>
                                     <td>{{ $asset->Checked_Out_to }}</td>
                                 </tr>
-            
                             @endforeach
                         </table>
                     </div>

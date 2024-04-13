@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone');
             $table->enum('department', ['IT', 'Sales', 'Design']);
-            $table->integer('inventory');
+            $table->integer('assets');
             $table->integer('components');
             $table->string('password');
             $table->rememberToken();
