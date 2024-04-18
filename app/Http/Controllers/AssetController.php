@@ -20,6 +20,11 @@ class AssetController extends Controller
         return redirect('/');
     }
 
+    public function create()
+    {
+        return view('assets.createAssets');
+    }
+
     public function edit(Asset $asset)
     {
         return view('assets.edit', compact('asset'));

@@ -14,10 +14,15 @@ class UserController extends Controller
         return view('users.indexUsers', $data);
     }
 
+    public function create()
+    {
+        return view('users.createUsers');
+    }
+
     public function store(Request $request)
     {
         User::create($request->all());
-        return redirect('/');
+        return redirect('/users');
     }
 
     public function edit(User $user)
@@ -28,12 +33,12 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $user->update($request->all());
-        return redirect('/');
+        return redirect('/users');
     }
 
     public function delete(User $user)
     {
         $user->delete();
-        return redirect('/');
+        return redirect('/users');
     }
 }
