@@ -8,7 +8,7 @@
                     <div class="panel-heading">Add User</div>
                     <div class="panel-body">
                         <form role="form" action="{{ url('/users') }}" method="POST">
-                            {{csrf_field}}
+                            {{csrf_field()}}
                         
                             <div class="form-group">
                                 <label for="control-label">Name</label>

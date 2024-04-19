@@ -28,8 +28,8 @@ Route::get('/assets/{asset}/delete', 'App\Http\Controllers\AssetController@delet
 
 
 Route::get('/users', 'App\Http\Controllers\UserController@index');
-Route::post('/users', 'App\Http\Controllers\UserController@store');
-Route::get('/users/create', 'App\Http\Controllers\UserController@create');
+// Route::post('/users', 'App\Http\Controllers\UserController@store');
+// Route::get('/users/create', 'App\Http\Controllers\UserController@create');
 
 
 Auth::routes();

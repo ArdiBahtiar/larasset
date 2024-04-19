@@ -19,8 +19,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone');
             $table->enum('department', ['IT', 'Sales', 'Design']);
-            $table->integer('assets');
-            $table->integer('components');
+            $table->integer('assets')->default(0);
+            $table->integer('components')->default(0);
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
