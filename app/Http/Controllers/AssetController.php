@@ -27,7 +27,7 @@ class AssetController extends Controller
 
     public function edit(Asset $asset)
     {
-        return view('assets.edit', compact('asset'));
+        return view('assets.editAssets', compact('asset'));
     }
 
     public function update(Request $request, Asset $asset)

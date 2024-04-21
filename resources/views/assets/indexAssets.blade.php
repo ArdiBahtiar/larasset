@@ -6,9 +6,12 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
-                <div class="panel-heading">Asset List</div>
+                <div class="panel-heading mb-2">ASSET LIST</div>
                 <div class="panel-body">
                     <div class="table-responsive">
+
+                        <a class="btn btn-info mb-2 mt-2" href="{{ url('assets/create') }}">{{ __('Input Asset') }}</a>
+
                         <table class="table">
                             <tr>
                                 <th>ID</th>
@@ -31,6 +34,11 @@
                                     <td>{{ $asset->Serial_Number }}</td>
                                     <td>{{ $asset->Status }}</td>
                                     <td>{{ $asset->Checked_Out_to }}</td>
+
+                                    <td>
+                                        <a class="btn btn-success" href="{{ url('assets/'.$asset->id.'/edit') }}">Edit</a>
+                                        <a class="btn btn-danger" href="{{ url('assets/'.$asset->id.'/delete') }}">Delete</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>
