@@ -7,14 +7,20 @@
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
+                {{-- <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('You are logged in!') }} --}}
+
+                    <div class="card-body">
+                        <a class="btn btn-success" href="{{ url('/') }}">Asset</a>
+                        <a class="btn btn-info" href="{{ url('/users') }}">User</a>
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -29,6 +29,7 @@
                             @foreach($users as $user)
                                 <tr>
                                     <td>{{ $user->id }}</td>
+                                    {{-- <td><a class="link-underline link-underline-opacity-0" href="{{ url('assets/' . $user->id . '/edit' ) }}">{{ $user->id }}</a></td>       ini sudah bener bisa ngelink, url bukan ke assets tapi ke users nanti --}}
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->title }}</td>
                                     <td>{{ $user->email }}</td>
