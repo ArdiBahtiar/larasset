@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">User List</div>
+                <div class="panel-heading h3">User List</div>
                 <div class="panel-body">
                     <div class="table-responsive">
                         <table class="table">
@@ -29,8 +29,8 @@
                             @foreach($users as $user)
                                 <tr>
                                     <td>{{ $user->id }}</td>
-                                    {{-- <td><a class="link-underline link-underline-opacity-0" href="{{ url('assets/' . $user->id . '/edit' ) }}">{{ $user->id }}</a></td>       ini sudah bener bisa ngelink, url bukan ke assets tapi ke users nanti --}}
-                                    <td>{{ $user->name }}</td>
+                                    <td><a class="link-underline link-underline-opacity-0" href="{{ url('users/' . $user->id . '/profile' ) }}">{{ $user->name }}</a></td>
+                                    {{-- <td>{{ $user->name }}</td> --}}
                                     <td>{{ $user->title }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>

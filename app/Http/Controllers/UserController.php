@@ -41,4 +41,12 @@ class UserController extends Controller
         $user->delete();
         return redirect('/users');
     }
+
+    public function profile(User $user, $id)
+    {
+        // $users = User::whereIn('id', array(1))->get();
+        $users = User::find($id);
+        $data = ['users' => $users];
+        return view('users.UserProfile', $data);
+    }
 }

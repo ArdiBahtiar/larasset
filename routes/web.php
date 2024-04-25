@@ -28,7 +28,7 @@ Route::get('/assets/{asset}/delete', 'App\Http\Controllers\AssetController@delet
 
 
 Route::get('/users', 'App\Http\Controllers\UserController@index');
-Route::get('/users/{user}/profile', 'App\Http\Controllers\UserController@profile');
+Route::get('/users/{id}/profile', 'App\Http\Controllers\UserController@profile');
 // Route::post('/users', 'App\Http\Controllers\UserController@store');
 // Route::get('/users/create', 'App\Http\Controllers\UserController@create');
 
