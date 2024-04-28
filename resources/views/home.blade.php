@@ -17,7 +17,7 @@
                     {{ __('You are logged in!') }} --}}
 
                     <div class="card-body">
-                        <a class="btn btn-success" href="{{ url('/') }}">Asset</a>
+                        <a class="btn btn-success" href="{{ url('/assets/index') }}">Asset</a>
                         <a class="btn btn-info" href="{{ url('/users') }}">User</a>
                     </div>
 

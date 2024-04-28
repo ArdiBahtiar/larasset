@@ -17,17 +17,17 @@
 
 <section style="background-color: #303030;">
     <div class="container py-5">
-      {{-- <div class="row">                                                                        BREADCRUMB CUMA BUAT NUNJUKKIN ALUR LINK
+      <div class="row">
         <div class="col">
           <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
             <ol class="breadcrumb mb-0">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">User</a></li>
+              <li class="breadcrumb-item"><a href="{{ url('/home') }}">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="{{ url('users') }}">User List</a></li>
               <li class="breadcrumb-item active" aria-current="page">User Profile</li>
             </ol>
           </nav>
         </div>
-      </div> --}}
+      </div>
   
       <div class="row">
         <div class="col-lg-4">

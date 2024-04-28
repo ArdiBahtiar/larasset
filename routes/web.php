@@ -18,21 +18,23 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'App\Http\Controllers\AssetController@index');
+// Route::get('/', 'App\Http\Controllers\AssetController@index')->middleware('auth');
+Route::get('/', 'App\Http\Controllers\HomeController@index')->middleware('auth');
 
-Route::post('/assets', 'App\Http\Controllers\AssetController@store');
-Route::get('/assets/create', 'App\Http\Controllers\AssetController@create');
-Route::put('/assets/{asset}', 'App\Http\Controllers\AssetController@update');
-Route::get('/assets/{asset}/edit', 'App\Http\Controllers\AssetController@edit');
-Route::get('/assets/{asset}/delete', 'App\Http\Controllers\AssetController@delete');
+Route::get('/assets/index', 'App\Http\Controllers\AssetController@index')->middleware('auth');
+Route::post('/assets', 'App\Http\Controllers\AssetController@store')->middleware('auth');
+Route::get('/assets/create', 'App\Http\Controllers\AssetController@create')->middleware('auth');
+Route::put('/assets/{asset}', 'App\Http\Controllers\AssetController@update')->middleware('auth');
+Route::get('/assets/{asset}/edit', 'App\Http\Controllers\AssetController@edit')->middleware('auth');
+Route::get('/assets/{asset}/delete', 'App\Http\Controllers\AssetController@delete')->middleware('auth');
 
 
-Route::get('/users', 'App\Http\Controllers\UserController@index');
-Route::get('/users/{id}/profile', 'App\Http\Controllers\UserController@profile');
+Route::get('/users', 'App\Http\Controllers\UserController@index')->middleware('auth');
+Route::get('/users/{id}/profile', 'App\Http\Controllers\UserController@profile')->middleware('auth');
 // Route::post('/users', 'App\Http\Controllers\UserController@store');
 // Route::get('/users/create', 'App\Http\Controllers\UserController@create');
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home');
