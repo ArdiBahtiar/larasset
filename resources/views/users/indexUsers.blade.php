@@ -16,8 +16,8 @@
                                 <th>Title</th>
                                 <th>email</th>
                                 <th>Phone</th>
-                                <th>Department</th>
-                                <th>Assets</th>
+                                {{-- <th>Department</th>
+                                <th>Assets</th> --}}
                             </tr>
         
                             @if(! count($users))
@@ -30,12 +30,11 @@
                                 <tr>
                                     <td>{{ $user->id }}</td>
                                     <td><a class="link-underline link-underline-opacity-0" href="{{ url('users/' . $user->id . '/profile' ) }}">{{ $user->name }}</a></td>
-                                    {{-- <td>{{ $user->name }}</td> --}}
                                     <td>{{ $user->title }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->department }}</td>
-                                    <td>{{ $user->assets }}</td>
+                                    {{-- <td>{{ $user->department }}</td>
+                                    <td>{{ $user->assets }}</td> --}}
                                 </tr>
                             @endforeach
                         </table>

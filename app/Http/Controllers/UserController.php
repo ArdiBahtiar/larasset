@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Asset;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -10,8 +11,9 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        $data = ['users' => $users];
-        return view('users.indexUsers', $data);
+        // $assets = Asset::where('Checked_Out_to', '=', $id)->get();
+        // $data = ['users' => $users];
+        return view('users.indexUsers', ['users' => $users]);
     }
 
     public function create()
@@ -42,11 +44,10 @@ class UserController extends Controller
         return redirect('/users');
     }
 
-    public function profile(User $user, $id)
+    public function profile($id)
     {
-        // $users = User::whereIn('id', array(1))->get();
         $users = User::find($id);
-        $data = ['users' => $users];
-        return view('users.UserProfile', $data);
+        $assets = Asset::where('Checked_Out_to', '=', $users->name)->get();
+        return view('users.UserProfile', ['users' => $users, 'assets' => $assets]);
     }
 }
