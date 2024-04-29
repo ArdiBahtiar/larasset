@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Asset;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AssetController extends Controller
@@ -22,12 +23,14 @@ class AssetController extends Controller
 
     public function create()
     {
-        return view('assets.createAssets');
+        $users = User::all();
+        return view('assets.createAssets', ['users' => $users]);
     }
 
     public function edit(Asset $asset)
     {
-        return view('assets.editAssets', compact('asset'));
+        $users = User::all();
+        return view('assets.editAssets', ['users' => $users], compact('asset'));
     }
 
     public function update(Request $request, Asset $asset)

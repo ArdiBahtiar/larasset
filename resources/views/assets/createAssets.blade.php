@@ -23,9 +23,18 @@
 
                         <input type="hidden" name="Status" value="Ready">
 
-                        <div class="form-group mb-3">
+                        {{-- <div class="form-group mb-3">
                             <label for="control-label">Checked out to</label>
                             <input type="text" name="Checked_Out_to" class="form-control">
+                        </div> --}}
+
+                        <div class="form-group">
+                            <label for="control-label" class="mt-2">Checked Out to</label>
+                            <select name="Checked_Out_to" id="Checked_Out_to" required focus>
+                                @foreach($users as $user)
+                                <option value="{{ $user->name }}">{{ $user->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="form-group">
