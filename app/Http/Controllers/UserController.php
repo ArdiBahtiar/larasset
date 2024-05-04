@@ -11,9 +11,14 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        // $assets = Asset::where('Checked_Out_to', '=', $id)->get();
-        // $data = ['users' => $users];
-        return view('users.indexUsers', ['users' => $users]);
+        // $assets = Asset::where('Checked_Out_to', '=', $users->name)->get();
+        $assets = [];
+
+        foreach ($users as $user) {
+            $userAssets = Asset::where('Checked_Out_to', '=', $user->name)->get();
+            $assets[$user->name] = $userAssets;
+        }
+        return view('users.indexUsers', ['users' => $users, 'assets' => $assets]);
     }
 
     public function create()

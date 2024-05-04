@@ -16,8 +16,8 @@
                                 <th>Title</th>
                                 <th>email</th>
                                 <th>Phone</th>
-                                {{-- <th>Department</th>
-                                <th>Assets</th> --}}
+                                {{-- <th>Department</th> --}}
+                                <th>Assets</th>
                             </tr>
         
                             @if(! count($users))
@@ -33,6 +33,11 @@
                                     <td>{{ $user->title }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
+                                    {{-- <td>{{ $assets[$user->name]->count() }}</td> --}}
+                                    <td>{{ count($assets[$user->name]) }}</td>
+                                    {{-- @foreach($assets[$user->name] as $asset)
+                                    <td>{{ $asset->count() }}</td>
+                                    @endforeach --}}
                                     {{-- <td>{{ $user->department }}</td>
                                     <td>{{ $user->assets }}</td> --}}
                                 </tr>
