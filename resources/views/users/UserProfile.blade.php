@@ -16,7 +16,7 @@
 </div> --}}
 
 <section style="background-color: #303030;">
-    <div class="container py-5">
+    <div class="container py-2">
       <div class="row">
         <div class="col">
           <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
@@ -51,35 +51,24 @@
               </div> --}}
             </div>
           </div>
+
+          @can('isAdmin')
           <div class="card mb-4 mb-lg-0">
             <div class="card-body p-0">
               <ul class="list-group list-group-flush rounded-3">
                 <li class="list-group-item d-flex justify-content-center">
-                  {{-- <button type="button" class="btn btn-outline-primary" style="width: 50%">Edit</button> --}}
                   <a href="{{ url('users/' . $users->id . '/edit') }}" class="btn btn-outline-primary" style="width: 50%">Edit</a>
                 </li>
                 <li class="list-group-item d-flex justify-content-center">
-                  {{-- <button type="button" class="btn btn-danger" style="width: 50%;">Delete</button> --}}
                   <a href="{{ url('users/' . $users->id . '/delete') }}" class="btn btn-danger" style="width: 50%;">Delete</a>
                 </li>
-                {{-- <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                  <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
-                  <p class="mb-0">@mdbootstrap</p>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                  <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                  <p class="mb-0">mdbootstrap</p>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                  <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                  <p class="mb-0">mdbootstrap</p>
-                </li> --}}
               </ul>
-                @endif
             </div>
           </div>
+          @endcan
         </div>
-
+        
+        @endif
                     {{-- INI BATAS UNTUK KOLOM CARD 4 BAGIAN --}}
 
 

@@ -13,7 +13,7 @@
 
                             <div class="form-group my-2">
                                 <label for="control-label">Name</label>
-                                <input type="text" name="Name" class="form-control" value="{{ $asset->name }}">
+                                <input type="text" name="Name" class="form-control" value="{{ $asset->Name }}">
                             </div>
                             
                             {{-- <div class="form-group">
@@ -50,9 +50,11 @@
                                 </div>
                             </div>
 
+                            {{-- @can('isAdmin') --}}
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success">Update Asset</button>
                             </div>
+                            {{-- @endcan --}}
                         </form>
 
                     </div>

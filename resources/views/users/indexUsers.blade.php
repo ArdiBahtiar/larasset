@@ -6,6 +6,14 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
+
+                <nav aria-label="breadcrumb" class="bg-light rounded-3 mb-4">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="{{ url('/home') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">User List</li>
+                    </ol>
+                </nav>
+
                 <div class="panel-heading h3">User List</div>
                 <div class="panel-body">
                     <div class="table-responsive">

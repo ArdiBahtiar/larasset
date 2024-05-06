@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading">Input new Asset</div>
+                <div class="panel-heading h3 mb-3">Input new Asset</div>
                 <div class="panel-body">
 
                     <form action="{{ url('/assets') }}" role="form" method="POST">
@@ -16,7 +16,7 @@
                             <input type="text" name="Name" class="form-control" required>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group my-2">
                             <label for="control-label">Serial Number</label>
                             <input type="text" name="Serial_Number" class="form-control" required>
                         </div>
@@ -28,7 +28,7 @@
                             <input type="text" name="Checked_Out_to" class="form-control">
                         </div> --}}
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="control-label" class="mt-2">Checked Out to</label>
                             <select name="Checked_Out_to" id="Checked_Out_to" required focus>
                                 @foreach($users as $user)
