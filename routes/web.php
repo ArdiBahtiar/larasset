@@ -31,6 +31,9 @@ Route::get('/assets/{asset}/delete', 'App\Http\Controllers\AssetController@delet
 
 Route::get('/users', 'App\Http\Controllers\UserController@index')->middleware('auth');
 Route::get('/users/{id}/profile', 'App\Http\Controllers\UserController@profile')->middleware('auth');
+Route::put('/users/{user}', 'App\Http\Controllers\UserController@update')->middleware('auth');
+Route::get('/users/{user}/edit', 'App\Http\Controllers\UserController@edit')->middleware('auth');
+Route::get('/users/{user}/delete', 'App\Http\Controllers\UserController@delete')->middleware('auth');
 // Route::post('/users', 'App\Http\Controllers\UserController@store');
 // Route::get('/users/create', 'App\Http\Controllers\UserController@create');
 

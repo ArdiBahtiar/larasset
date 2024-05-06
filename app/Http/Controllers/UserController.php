@@ -34,7 +34,8 @@ class UserController extends Controller
 
     public function edit(User $user)
     {
-        return view('users.edit', compact('user'));
+        $users = User::all();
+        return view('users.editUsers', ['users' => $users], compact('user'));
     }
 
     public function update(Request $request, User $user)
